@@ -144,7 +144,7 @@ export default function Achievements() {
               />
             </div>
             <div className="text-left">
-              <div className="text-white font-label-sm">Your Name</div>
+              <div className="text-white font-label-sm">Nahin Ahmed</div>
               <div className="text-on-surface-variant text-xs">Web Developer & Competitive Programmer</div>
             </div>
           </div>

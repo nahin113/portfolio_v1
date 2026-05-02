@@ -79,7 +79,7 @@ function Navbar() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             className: "font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300",
                             href: "#",
-                            children: "Services"
+                            children: "What I Build"
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.jsx",
                             lineNumber: 37,
@@ -88,7 +88,7 @@ function Navbar() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             className: "font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300",
                             href: "#",
-                            children: "Testimonials"
+                            children: "Achievement"
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.jsx",
                             lineNumber: 38,
@@ -97,7 +97,7 @@ function Navbar() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             className: "font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300",
                             href: "#",
-                            children: "FAQs"
+                            children: "Skill Sets"
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.jsx",
                             lineNumber: 39,
@@ -110,7 +110,7 @@ function Navbar() {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    className: "bg-gradient-to-r from-[#007AFF] to-[#00C2FF] text-white px-4 md:px-6 py-2 rounded-full font-label-sm text-[10px] md:text-label-sm hover:scale-105 transition-all duration-300 active:scale-95 shrink-0",
+                    className: "bg-gradient-to-r from-[#007AFF] to-[#00C2FF] text-white px-4 md:px-6 py-2 rounded-full font-label-sm text-[14px] md:text-label-sm hover:scale-105 transition-all duration-300 active:scale-95 shrink-0",
                     children: "Hire Me"
                 }, void 0, false, {
                     fileName: "[project]/components/Navbar.jsx",
@@ -1230,7 +1230,7 @@ function Achievements() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "text-white font-label-sm",
-                                            children: "Your Name"
+                                            children: "Nahin Ahmed"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Testimonials.jsx",
                                             lineNumber: 147,

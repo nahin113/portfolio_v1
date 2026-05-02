@@ -404,10 +404,6 @@
     pointer-events: none;
   }
 
-  .visible {
-    visibility: visible;
-  }
-
   .absolute {
     position: absolute;
   }
@@ -418,10 +414,6 @@
 
   .relative {
     position: relative;
-  }
-
-  .inset-x-0 {
-    inset-inline: calc(var(--spacing) * 0);
   }
 
   .start {
@@ -522,10 +514,6 @@
     margin-top: calc(var(--spacing) * 1);
   }
 
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
-  }
-
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
@@ -620,10 +608,6 @@
 
   .w-48 {
     width: calc(var(--spacing) * 48);
-  }
-
-  .w-\[90\%\] {
-    width: 90%;
   }
 
   .w-\[95\%\] {
@@ -966,6 +950,18 @@
 
   .text-\[10px\] {
     font-size: 10px;
+  }
+
+  .text-\[12px\] {
+    font-size: 12px;
+  }
+
+  .text-\[14px\] {
+    font-size: 14px;
+  }
+
+  .text-\[20px\] {
+    font-size: 20px;
   }
 
   .leading-relaxed {

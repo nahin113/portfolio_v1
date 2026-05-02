@@ -34,11 +34,11 @@ export default function Navbar() {
         <div className="text-lg md:text-xl font-black text-white tracking-tighter shrink-0">NAHINBUILDS</div>
         <div className="hidden md:flex items-center gap-8">
           <a className="font-body-md text-xs font-medium uppercase tracking-widest text-blue-400 border-b border-blue-500 pb-1 hover:scale-105 transition-all duration-300" href="#">Work</a>
-          <a className="font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300" href="#">Services</a>
-          <a className="font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300" href="#">Testimonials</a>
-          <a className="font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300" href="#">FAQs</a>
+          <a className="font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300" href="#">What I Build</a>
+          <a className="font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300" href="#">Achievement</a>
+          <a className="font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300" href="#">Skill Sets</a>
         </div>
-        <button className="bg-gradient-to-r from-[#007AFF] to-[#00C2FF] text-white px-4 md:px-6 py-2 rounded-full font-label-sm text-[10px] md:text-label-sm hover:scale-105 transition-all duration-300 active:scale-95 shrink-0">Hire Me</button>
+        <button className="bg-gradient-to-r from-[#007AFF] to-[#00C2FF] text-white px-4 md:px-6 py-2 rounded-full font-label-sm text-[14px] md:text-label-sm hover:scale-105 transition-all duration-300 active:scale-95 shrink-0">Hire Me</button>
       </motion.nav>
     </div>
   );
