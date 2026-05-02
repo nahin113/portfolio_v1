@@ -1,8 +1,8 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import Testimonials from '@/components/Testimonials';
-import FAQ from '@/components/FAQ';
+import Services from '@/components/WhatIBuild';
+import Testimonials from '@/components/Achievements';
+import FAQ from '@/components/Skillset';
 import Footer from '@/components/Footer';
 
 export default function Home() {
