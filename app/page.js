@@ -11,10 +11,10 @@ export default function Home() {
     <main className="w-full overflow-hidden bg-white">
       <Hero />
       <AboutMe />
-      <Services />
-      <Testimonials />
       <FAQ />
+      <Services />
       <Qualifications />
+      <Testimonials />
       <Footer />
     </main>
   );

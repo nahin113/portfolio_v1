@@ -172,6 +172,9 @@ export default function WhatIBuild() {
               <motion.div
                 key={project.slug}
                 variants={cardVars}
+                initial="initial"
+                animate="animate"
+                exit="exit"
                 layout
                 className="group flex flex-col bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-slate-200 hover:-translate-y-1 transition-all duration-300"
               >

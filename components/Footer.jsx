@@ -53,22 +53,22 @@ export default function Footer() {
     }
   };
 
-  const handleShare = async () => {
-    if (typeof window !== 'undefined') {
-      if (navigator.share) {
-        try {
-          await navigator.share({
-            title: 'Nahin Ahmed Portfolio',
-            url: window.location.origin,
-          });
-        } catch (err) {
-          console.log('Share canceled or failed', err);
-        }
-      } else {
-        handleCopyLink();
-      }
-    }
-  };
+  // const handleShare = async () => {
+  //   if (typeof window !== 'undefined') {
+  //     if (navigator.share) {
+  //       try {
+  //         await navigator.share({
+  //           title: 'Nahin Ahmed Portfolio',
+  //           url: window.location.origin,
+  //         });
+  //       } catch (err) {
+  //         console.log('Share canceled or failed', err);
+  //       }
+  //     } else {
+  //       handleCopyLink();
+  //     }
+  //   }
+  // };
 
   return (
     <footer id="footer" className="relative w-full bg-white py-24 px-6 border-t border-slate-100 overflow-hidden flex flex-col items-center">
@@ -186,7 +186,7 @@ export default function Footer() {
         {/* Share & Socials Row */}
         <div className="flex flex-wrap items-center justify-center gap-3 mt-20 w-full max-w-lg">
           {/* Share */}
-          <button 
+          {/* <button 
             onClick={handleShare}
             className="group inline-flex items-center gap-2 border border-slate-200 bg-white px-4 py-2 rounded-full text-[13px] font-bold text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all shadow-sm active:scale-95 cursor-pointer"
           >
@@ -194,7 +194,7 @@ export default function Footer() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
             </svg>
             Share
-          </button>
+          </button> */}
 
           {/* LinkedIn */}
           <a 

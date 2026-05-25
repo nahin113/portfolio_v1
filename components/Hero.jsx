@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import profileImg from '@/assets/DP.jpg';
+import profileImg from '@/assets/DP.jpeg';
 import { motion } from 'framer-motion';
 
 export default function Hero() {

@@ -45,20 +45,20 @@ export default function AboutMe() {
         <div className="mt-10 flex flex-col gap-6 text-slate-500 font-medium text-[15px] md:text-[16px] leading-relaxed tracking-wide">
           <motion.p variants={itemVars}>
             I&apos;m Nahin Ahmed, a Full-Stack Developer and CSE student at Bangladesh University 
-            of Business and Technology (BUBT), Dhaka. I&apos;m passionate about building real-world 
-            web applications using the MERN stack — from clean, responsive frontends to secure, 
+            of Business and Technology (BUBT), Dhaka. I&apos;m passionate about building real world 
+            web applications using the MERN stack from clean, responsive frontends to secure, 
             scalable backend APIs. I combine modern web development with strong problem-solving 
             fundamentals sharpened through competitive programming.
           </motion.p>
 
           <motion.p variants={itemVars}>
-            I&apos;ve built multiple full-stack projects independently — including Petora, a Pet 
+            I&apos;ve built multiple full stack projects independently including Petora, a Pet 
             Adoption Platform; Roamly, a Travel Package Booking Platform; and NexLearn, an Online 
-            Learning Platform — each featuring authentication, dynamic data, and production-ready 
+            Learning Platform each featuring authentication, dynamic data, and production ready 
             architecture using Next.js 15, Node.js, Express.js, MongoDB, and BetterAuth. Alongside 
             development, I actively compete on Codeforces (max 1068), CodeChef (max 1287), and 
             LeetCode (max 1434), and have participated in the ICPC Asia Dhaka Regional Preliminary 
-            three consecutive years — ranking 54th at the BUBT Inter-University Programming 
+            three consecutive years ranking 54th at the BUBT Inter University Programming 
             Contest 2025.
           </motion.p>
 
