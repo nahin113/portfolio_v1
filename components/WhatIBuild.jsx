@@ -77,7 +77,7 @@ export default function WhatIBuild() {
             My Projects
           </h2>
           <p className="text-slate-500 font-medium text-base md:text-lg mt-3">
-            Projects I worked on — click a card to view its full case&nbsp;study.
+            Projects I worked on
           </p>
         </div>
 

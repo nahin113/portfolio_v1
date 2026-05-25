@@ -26,19 +26,19 @@ export default function Qualifications() {
 
   const experienceData = [
     {
-      title: "Full-Stack Developer (Self-Initiated Projects)",
-      subtitle: "Independent — Petora, Roamly, NexLearn",
-      date: "2024 - Present"
-    },
-    {
       title: "Competitive Programmer",
       subtitle: "Codeforces · CodeChef · LeetCode",
-      date: "2022 - Present"
+      date: "2023 - Present"
     },
     {
       title: "ICPC Asia Dhaka Regional Preliminary",
-      subtitle: "Participant — 3 Consecutive Years",
-      date: "2022 - 2024"
+      subtitle: "Participant - 3 Consecutive Years",
+      date: "2023 - 2025"
+    },
+    {
+      title: "Full-Stack Developer (Self-Initiated Projects)",
+      subtitle: "Independent - Petora, Roamly, NexLearn",
+      date: "2025 - Present"
     }
   ];
 

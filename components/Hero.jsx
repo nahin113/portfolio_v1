@@ -89,7 +89,7 @@ export default function Hero() {
           variants={titleVars}
           className="font-extrabold text-4xl md:text-5xl lg:text-6xl text-slate-950 mt-6 leading-tight tracking-tight max-w-3xl"
         >
-          Hi I&apos;m a <span className="text-[#D9265F]">Full-Stack Developer</span> building real-world web applications with the MERN stack.
+          Hi I&apos;m a <span className="text-[#D9265F]">Full Stack Developer</span> building real world web applications with the MERN stack.
         </motion.h1>
 
         {/* Subheading / Description */}
@@ -97,7 +97,7 @@ export default function Hero() {
           variants={descVars}
           className="text-slate-500 font-medium text-base md:text-lg max-w-2xl mt-6 leading-relaxed"
         >
-          A CSE student at BUBT, Dhaka. Passionate about building scalable full-stack web apps with Next.js, Node.js, and MongoDB — and sharpening problem-solving skills through competitive programming.
+          A CSE student at BUBT, Dhaka. Passionate about building scalable full stack web apps with Next.js, Node.js, and MongoDB and sharpening problem solving skills through competitive programming.
         </motion.p>
 
         {/* Buttons & Socials Row */}

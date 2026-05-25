@@ -11,7 +11,7 @@ export default function Achievements() {
     {
       name: "IUPC – Top 50 Finish",
       role: "Competitive Programming",
-      content: "Competed in the Inter-University Programming Contest (IUPC) and secured a place in the top 50 — solving algorithmic challenges under time pressure against university-level programmers.",
+      content: "Competed in the Inter University Programming Contest (IUPC) and secured a place in the top 50 - solving algorithmic challenges under time pressure against university level programmers.",
       image: Iupc,
       date: "2020 - 2024",
       tags: ["Algorithms", "C++", "Competitive Programming", "Problem Solving"]
@@ -19,7 +19,7 @@ export default function Achievements() {
     {
       name: "CGPA 3.38",
       role: "Academic Achievement",
-      content: "Maintained a strong academic record with a CGPA of 3.33 — balancing coursework in computer science fundamentals, algorithms, and software engineering alongside active project development.",
+      content: "Maintained a strong academic record with a CGPA of 3.38, balancing coursework in computer science fundamentals, algorithms, and software engineering alongside active project development.",
       image: Cgpa,
       date: "2020 - 2024",
       tags: ["Computer Science", "Algorithms", "Software Engineering", "Academics"]
@@ -27,7 +27,7 @@ export default function Achievements() {
     {
       name: "Multiple Next.js Projects",
       role: "Practical Development",
-      content: "Designed and shipped several real-world projects using Next.js — covering full-stack features, API routes, server-side rendering, and modern UI — each one sharpening my production-level development skills.",
+      content: "Designed and shipped several real world projects using Next.js, covering full-stack features, API routes, server-side rendering, and modern UI. ach one sharpening my production level development skills.",
       image: Next,
       date: "2023 - Present",
       tags: ["Next.js", "React", "Full-Stack", "Web Development"]
