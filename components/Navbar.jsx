@@ -3,9 +3,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState('works');
+  const [activeSection, setActiveSection] = useState('about');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -29,12 +30,7 @@ export default function Navbar() {
           const top = el.offsetTop;
           const height = el.offsetHeight;
           if (scrollPos >= top && scrollPos < top + height) {
-            if (section === 'about') setActiveSection('About');
-            else if (section === 'what-i-build') setActiveSection('Projects');
-            else if (section === 'skillsets') setActiveSection('Skills');
-            else if (section === 'qualifications') setActiveSection('Experience');
-            else if (section === 'achievements') setActiveSection('Achievements');
-            else if (section === 'footer') setActiveSection('Contact');
+            setActiveSection(section);
             break;
           }
         }
@@ -47,12 +43,12 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { label: 'ABOUT', href: '#about', id: 'about' },
-    { label: 'PROJECTS', href: '#what-i-build', id: 'works' },
-    { label: 'SKILLS', href: '#skillsets', id: 'skills' },
-    { label: 'EXPERIENCE', href: '#qualifications', id: 'experience' },
-    { label: 'ACHIEVEMENTS', href: '#achievements', id: 'achievements' },
-    { label: 'CONTACT', href: '#footer', id: 'contact' }
+    { label: 'ABOUT', href: '/#about', id: 'about' },
+    { label: 'PROJECTS', href: '/#what-i-build', id: 'what-i-build' },
+    { label: 'SKILLS', href: '/#skillsets', id: 'skillsets' },
+    { label: 'EXPERIENCE', href: '/#qualifications', id: 'qualifications' },
+    { label: 'ACHIEVEMENTS', href: '/#achievements', id: 'achievements' },
+    { label: 'CONTACT', href: '/#footer', id: 'footer' }
   ];
 
   return (
@@ -63,18 +59,18 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 md:px-8 flex justify-between items-center">
         {/* Left Side: Circular 'A |' Logo */}
-        <a href="/" className="flex items-center shrink-0">
+        <Link href="/" className="flex items-center shrink-0">
           <div className="w-10 h-10 flex items-center justify-center relative hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer">
-          <Image src="/logo-t.png" alt="Logo" fill={true} />
+            <Image src="/logo-t.png" alt="Logo" fill={true} />
           </div>
-        </a>
+        </Link>
 
         {/* Right Side: Desktop Navigation links */}
         <nav className="hidden md:flex items-center gap-10">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
-              <a
+              <Link
                 key={item.id}
                 href={item.href}
                 className={`relative font-bold text-[11px] tracking-wider transition-colors py-1 ${
@@ -89,7 +85,7 @@ export default function Navbar() {
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
-              </a>
+              </Link>
             );
           })}
         </nav>
@@ -121,7 +117,7 @@ export default function Navbar() {
               {navItems.map((item) => {
                 const isActive = activeSection === item.id;
                 return (
-                  <a
+                  <Link
                     key={item.id}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
@@ -133,7 +129,7 @@ export default function Navbar() {
                     {isActive && (
                       <span className="w-2 h-2 rounded-full bg-[#D9265F]" />
                     )}
-                  </a>
+                  </Link>
                 );
               })}
             </nav>

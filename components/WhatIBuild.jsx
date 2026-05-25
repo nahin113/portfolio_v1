@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '@/lib/projects';
 
@@ -175,13 +176,37 @@ export default function WhatIBuild() {
                 className="group flex flex-col bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-slate-200 hover:-translate-y-1 transition-all duration-300"
               >
                 {/* ── Project image / gradient banner ── */}
-                <div
-                  className={`w-full aspect-[16/10] bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}
-                >
-                  <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="text-white/90 font-extrabold text-sm md:text-base uppercase tracking-wider text-center drop-shadow-sm select-none px-4">
-                    {project.title}
-                  </span>
+                <div className="w-full aspect-[16/10] relative overflow-hidden bg-slate-50 flex items-center justify-center">
+                  {project.img ? (
+                    <Image
+                      src={project.img}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      priority={false}
+                    />
+                  ) : (
+                    <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient}`} />
+                  )}
+                  {/* Subtle dark overlay for readability */}
+                  <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-slate-950/45 transition-colors duration-300" />
+                  
+                  {/* Premium floating tag in the image top corner */}
+                  {project.tags && project.tags.length > 0 && (
+                    <div className="absolute top-4 left-4 z-10">
+                      <span className="bg-white/90 backdrop-blur-md text-slate-900 border border-slate-200/50 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+                        {project.tags[0]}
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Title overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center p-4 z-10">
+                    <span className="text-white font-extrabold text-sm md:text-base uppercase tracking-widest text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] select-none group-hover:scale-105 transition-transform duration-300">
+                      {project.title}
+                    </span>
+                  </div>
                 </div>
 
                 {/* ── Card body ── */}

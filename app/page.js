@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import AboutMe from '@/components/AboutMe';
 import Services from '@/components/WhatIBuild';
@@ -10,7 +9,6 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <main className="w-full overflow-hidden bg-white">
-      <Navbar />
       <Hero />
       <AboutMe />
       <Services />

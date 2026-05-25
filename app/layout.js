@@ -35,6 +35,7 @@ export const metadata = {
 
 import SmoothScroll from '@/components/SmoothScroll';
 import CustomCursor from '@/components/CustomCursor';
+import Navbar from '@/components/Navbar';
 
 export default function RootLayout({ children }) {
   return (
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} font-body-md text-body-md antialiased`}>
         <SmoothScroll>
           <CustomCursor />
+          <Navbar />
           {children}
         </SmoothScroll>
       </body>

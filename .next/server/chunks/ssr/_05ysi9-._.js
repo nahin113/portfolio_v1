@@ -1,3 +1,0 @@
-module.exports=[33354,(a,b,c)=>{"use strict";c._=function(a){return a&&a.__esModule?a:{default:a}}},28270,a=>{a.v("/_next/static/media/DP.01z~6ga.eo7wt.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},88469,a=>{a.v("/_next/static/media/Next.1403j45wotf~8.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},94351,a=>{a.v("/_next/static/media/CGPA.0-u1ot6xg2b9a.png"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},47215,a=>{a.v("/_next/static/media/IUPC.021yhhm8qe4w6.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))}];
-
-//# sourceMappingURL=_05ysi9-._.js.map
