@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 export default function Skillset() {
   const techLogos = [
     { slug: 'javascript', name: 'JavaScript' },
-    { slug: 'typescript', name: 'TypeScript' },
     { slug: 'react', name: 'React' },
     { slug: 'nextdotjs', name: 'Next.js' },
     { slug: 'nodedotjs', name: 'Node.js' },
@@ -29,7 +28,6 @@ export default function Skillset() {
         "Framer Motion",
         "HTML5 & CSS3",
         "JavaScript (ES6+)",
-        "TypeScript"
       ]
     },
     {
@@ -71,8 +69,7 @@ export default function Skillset() {
         "Vercel",
         "Postman",
         "VS Code",
-        "npm / yarn",
-        "Linux CLI"
+        "npm",
       ]
     },
     {

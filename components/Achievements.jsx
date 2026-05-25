@@ -17,7 +17,7 @@ export default function Achievements() {
       tags: ["Algorithms", "C++", "Competitive Programming", "Problem Solving"]
     },
     {
-      name: "CGPA 3.33",
+      name: "CGPA 3.38",
       role: "Academic Achievement",
       content: "Maintained a strong academic record with a CGPA of 3.33 — balancing coursework in computer science fundamentals, algorithms, and software engineering alongside active project development.",
       image: Cgpa,

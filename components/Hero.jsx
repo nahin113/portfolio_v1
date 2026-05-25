@@ -121,8 +121,8 @@ export default function Hero() {
 
           {/* Download Resume */}
           <a 
-            href="/Nahin_Ahmed_Resume.pdf"
-            download="Nahin_Ahmed_Resume.pdf"
+            href="/Nahin_Resume.pdf"
+            download="Nahin_Resume.pdf"
             className="group border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold px-6 py-3 rounded-full text-sm flex items-center gap-2 transition-all shadow-sm active:scale-95 cursor-pointer bg-white"
           >
             Download Resume
@@ -133,7 +133,7 @@ export default function Hero() {
 
           {/* LinkedIn */}
           <a 
-            href="https://www.linkedin.com/in/nahin-ahmed-bd/" 
+            href="https://www.linkedin.com/in/nahinahmed/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="w-11 h-11 border border-slate-200 bg-white rounded-full flex items-center justify-center hover:bg-slate-50 text-slate-600 hover:text-slate-900 transition-all shadow-sm active:scale-95"
