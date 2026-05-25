@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "8373f1fe6e5423223fe23ad93dae3436",
-    "previewModeSigningKey": "d10f4f3e9231e9ac40c8c118be8ecfa1efd4927dbc0129f5cb25369481cf5042",
-    "previewModeEncryptionKey": "927a5910f75a1c926da1a69ef359b4996e61ad5bd9667b48179f6ce324caa434"
-  }
-}
+{"version":4,"routes":{"/projects/petora":{},"/projects/roamly":{},"/projects/nexlearn":{}},"dynamicRoutes":{"/projects/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/projects/[slug]","routeRegex":"^\\/projects\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"7d55fb31eef81e3faa577af6cef6f575","previewModeSigningKey":"3d426482d9d321fee1c2c30c6e90d9e6d9207e412921704bc1499701a210a720","previewModeEncryptionKey":"e9c7fe29f908baa2a05906ff71e33ebf6380678c70fcdcbcab56eb7ecc239f81"}}

@@ -1,45 +1,145 @@
 'use client';
 
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
-import { useState, useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Navbar() {
-  const [hidden, setHidden] = useState(false);
-  const { scrollY } = useScroll();
-  const navRef = useRef(null);
+  const [activeSection, setActiveSection] = useState('works');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious();
-    if (latest > previous && latest > 150) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-  });
+  // Monitor page scroll to highlight active link and add shadow on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      // Background scroll shadow trigger
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+
+      // Track active section for green underline navigation indicator
+      const sections = ['about', 'what-i-build', 'skillsets', 'qualifications', 'achievements', 'footer'];
+      const scrollPos = window.scrollY + 200;
+
+      for (const section of sections) {
+        const el = document.getElementById(section);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            if (section === 'about') setActiveSection('About');
+            else if (section === 'what-i-build') setActiveSection('Projects');
+            else if (section === 'skillsets') setActiveSection('Skills');
+            else if (section === 'qualifications') setActiveSection('Experience');
+            else if (section === 'achievements') setActiveSection('Achievements');
+            else if (section === 'footer') setActiveSection('Contact');
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navItems = [
+    { label: 'ABOUT', href: '#about', id: 'about' },
+    { label: 'PROJECTS', href: '#what-i-build', id: 'works' },
+    { label: 'SKILLS', href: '#skillsets', id: 'skills' },
+    { label: 'EXPERIENCE', href: '#qualifications', id: 'experience' },
+    { label: 'ACHIEVEMENTS', href: '#achievements', id: 'achievements' },
+    { label: 'CONTACT', href: '#footer', id: 'contact' }
+  ];
 
   return (
-    <div className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 pointer-events-none">
-      <motion.nav 
-        ref={navRef}
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ 
-          y: hidden ? -120 : 0, 
-          opacity: 1 
-        }}
-        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className="pointer-events-auto w-full px-6 py-3 flex justify-between items-center bg-slate-900/70 backdrop-blur-md rounded-full border border-white/10 shadow-2xl shadow-blue-500/5"
-      >
-        <div className="text-lg md:text-xl font-black text-white tracking-tighter shrink-0">NAHINBUILDS</div>
-        <div className="hidden md:flex items-center gap-8">
-          <a className="font-body-md text-xs font-medium uppercase tracking-widest text-blue-400 border-b border-blue-500 pb-1 hover:scale-105 transition-all duration-300" href="#hero">Work</a>
-          <a className="font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300" href="#what-i-build">What I Build</a>
-          <a className="font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300" href="#achievements">Achievement</a>
-          <a className="font-body-md text-xs font-medium uppercase tracking-widest text-slate-400 hover:text-white hover:scale-105 transition-all duration-300" href="#skillsets">Skill Sets</a>
-        </div>
-        <button className="bg-gradient-to-r from-[#007AFF] to-[#00C2FF] text-white px-4 md:px-6 py-2 rounded-full font-label-sm text-[14px] md:text-label-sm hover:scale-105 transition-all duration-300 active:scale-95 shrink-0">Hire Me</button>
-      </motion.nav>
-    </div>
+    <header 
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-md ${
+        scrolled ? 'py-4 shadow-sm border-b border-slate-100' : 'py-5'
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-6 md:px-8 flex justify-between items-center">
+        {/* Left Side: Circular 'A |' Logo */}
+        <a href="/" className="flex items-center shrink-0">
+          <div className="w-10 h-10 flex items-center justify-center relative hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer">
+          <Image src="/logo-t.png" alt="Logo" fill={true} />
+          </div>
+        </a>
+
+        {/* Right Side: Desktop Navigation links */}
+        <nav className="hidden md:flex items-center gap-10">
+          {navItems.map((item) => {
+            const isActive = activeSection === item.id;
+            return (
+              <a
+                key={item.id}
+                href={item.href}
+                className={`relative font-bold text-[11px] tracking-wider transition-colors py-1 ${
+                  isActive ? 'text-slate-950' : 'text-slate-400 hover:text-slate-900'
+                }`}
+              >
+                {item.label}
+                {isActive && (
+                  <motion.div 
+                    layoutId="navbarUnderline"
+                    className="absolute left-0 bottom-[-4px] w-full h-[2.5px] bg-[#D9265F] rounded-full"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </a>
+            );
+          })}
+        </nav>
+
+        {/* Mobile Hamburger menu button */}
+        <button 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8 rounded-full border border-slate-100 hover:bg-slate-50 transition-colors"
+        >
+          <span className={`h-[2px] w-4 bg-slate-950 rounded-full transition-transform duration-300 ${
+            mobileMenuOpen ? 'rotate-45 translate-y-[4px]' : ''
+          }`} />
+          <span className={`h-[2px] w-4 bg-slate-950 rounded-full transition-transform duration-300 ${
+            mobileMenuOpen ? '-rotate-45 -translate-y-[4px]' : ''
+          }`} />
+        </button>
+      </div>
+
+      {/* Mobile Drawer menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden w-full bg-white border-t border-slate-100 px-6 py-6 absolute top-full left-0 overflow-hidden shadow-lg"
+          >
+            <nav className="flex flex-col gap-5">
+              {navItems.map((item) => {
+                const isActive = activeSection === item.id;
+                return (
+                  <a
+                    key={item.id}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`text-[12px] font-bold tracking-wider py-1.5 border-b border-slate-50 flex items-center justify-between ${
+                      isActive ? 'text-slate-950' : 'text-slate-400 hover:text-slate-900'
+                    }`}
+                  >
+                    {item.label}
+                    {isActive && (
+                      <span className="w-2 h-2 rounded-full bg-[#D9265F]" />
+                    )}
+                  </a>
+                );
+              })}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 }

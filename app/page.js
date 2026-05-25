@@ -1,20 +1,22 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import AboutMe from '@/components/AboutMe';
 import Services from '@/components/WhatIBuild';
 import Testimonials from '@/components/Achievements';
 import FAQ from '@/components/Skillset';
+import Qualifications from '@/components/Qualifications';
 import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full overflow-hidden bg-white">
       <Navbar />
-      <div className='container mx-auto space-y-12'>
       <Hero />
+      <AboutMe />
       <Services />
       <Testimonials />
       <FAQ />
-      </div>
+      <Qualifications />
       <Footer />
     </main>
   );
