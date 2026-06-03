@@ -89,7 +89,7 @@ export default function Hero() {
           variants={titleVars}
           className="font-extrabold text-4xl md:text-5xl lg:text-6xl text-slate-950 mt-6 leading-tight tracking-tight max-w-3xl"
         >
-          Hi I&apos;m a <span className="text-[#D9265F]">MERN Stack Developer</span> building real world web applications with the MERN stack.
+          Hi I&apos;m a <span className="text-[#D9265F]">Full Stack Developer</span> building real world web applications with the MERN stack.
         </motion.h1>
 
         {/* Subheading / Description */}
@@ -164,7 +164,7 @@ real functionality, and shipping products that work.
           variants={avatarVars}
           className="mt-16 flex justify-center"
         >
-          <div className="relative w-44 h-44 md:w-52 md:h-52 rounded-full border-[10px] border-white shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1),0_10px_15px_-10px_rgba(0,0,0,0.1)] bg-[#a24444] overflow-hidden">
+          <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-[10px] border-white shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1),0_10px_15px_-10px_rgba(0,0,0,0.1)] bg-[#a24444] overflow-hidden">
             <Image 
               src={profileImg} 
               alt="Nahin Ahmed - Full Stack Developer" 
