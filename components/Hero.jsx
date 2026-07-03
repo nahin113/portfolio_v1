@@ -122,7 +122,7 @@ real functionality, and shipping products that work.
 
           {/* Download Resume */}
           <a 
-            href="/Nahin_Resume.pdf"
+            href="https://drive.google.com/file/d/1trqbMJ0RGPiILnKsxVhKFDpS6467d7Ya/view?usp=drive_link"
             download="Nahin_Resume.pdf"
             className="group border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold px-6 py-3 rounded-full text-sm flex items-center gap-2 transition-all shadow-sm active:scale-95 cursor-pointer bg-white"
           >
